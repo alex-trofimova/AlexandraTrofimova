@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old tags</title>
+</head>
+<body>
+    <!--стилизацию не использовала, CSS вроде как не знаем-->
+    <h2>Мини-справочник по дополнительным тегам с примерами</h2>
+    <p>Итак, есть множество тегов, которые как таковые 
+    мы не будем изучать в нашем курсе, но которые знать не помешает.</p>
+    <p>Для удобства изучения разобъем их на несколько групп:</p>
+    <h3>1. Форматирование текста</h3>
+    <p>1.1. Теги <strong>&#60;dl&#62;</strong><strong>&#60;dt&#62;</strong> и <strong>&#60;dd&#62;</strong> 
+    для создания списка определений</p>
+
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td>
+                <strong>Пример</strong>
+            </td>
+
+            <td>
+                <strong>Результат примера</strong>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <pre><code>&lt;dl&gt;
+    &lt;dt&gt;Какое-нибудь одно определение&lt;/dt&gt;
+        &lt;dd&gt;Подробное и, возможно, очень длинное 
+        описание этого определения&lt;/dd&gt;
+    &lt;dt&gt;Какое-нибудь другое определение&lt;/dt&gt;
+        &lt;dd&gt;Такое же подробное и не менее длинное 
+        описание этого определения&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+            </td>
+
+            <td> 
+                <dl>
+                    <dt>Какое-нибудь одно определение</dt>
+                     <dd>Подробное и, возможно, очень длинное 
+                        описание этого определения</dd>
+                    <dt>Какое-нибудь другое определение</dt>
+                     <dd>Такое же подробное и не менее длинное 
+                        описание этого определения</dd>
+                </dl>
+            </td>
+        </tr>
+    </table>
+
+    <p>1.2. Тег <strong>&#60;ins&#62;</strong> для выделения добавленного текста</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td> 
+                <pre><code>В этот текст добавлено &lt;ins&gt;новое словосочетание&lt;/ins&gt;, 
+обратите внимание!</code></pre>
+            </td>
+
+            <td> 
+                В этот текст добавлено <ins>новое словосочетание</ins>, обратите внимание!
+            </td>
+        </tr>
+    </table>
+
+    <p>1.3. Тег <strong>&#60;del&#62;</strong> для выделения удаленного текста</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td> 
+                <pre><code>А из этого текста удалено &lt;del&gt;старое словосочетание&lt;/del&gt;, 
+стало лучше!</code></pre>
+            </td>
+
+            <td> 
+                А из этого текста удалено <del>старое словосочетание</del>, стало лучше!
+            </td>
+        </tr>
+    </table>
+    <p>1.4. Тег <strong>&#60;sub&#62;</strong> для отображения текста в нижнем индексе</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td> 
+                <pre><code>Используйте этот тег для написания, 
+например, формулы воды: H&lt;sub&gt;2&lt;/sub&gt;O</code></pre>
+            </td>
+
+            <td> 
+                Используйте этот тег для написания, например, формулы воды:
+                     H<sub>2</sub>O
+            </td>
+        </tr>
+    </table>
+    <p>1.5. Тег <strong>&#60;sup&#62;</strong> для отображения текста в верхнем индексе</p>    
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td> 
+                <pre><code>А этот тег - для записи квадратного уравнения: 
+ax&lt;sup&gt;2&lt;/sup&gt;+bx+c=0</code></pre>
+            </td>
+
+            <td> 
+                А этот тег - для записи квадратного уравнения: ax<sup>2</sup>+bx+c=0
+            </td>
+        </tr>
+    </table>
+    <br>
+    <h3>2. Цитаты</h3>
+    <p>2.1. Тег <strong>&#60;q&#62;</strong> для коротких цитат</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td>
+                <strong>Пример</strong>
+            </td>
+
+            <td>
+                <strong>Результат примера</strong>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <pre><code>Мне из коротких цитат почему-то вспомнилась 
+фраза Марка Твена:&lt;q&gt;Бросить курить легко. 
+Я сам бросал раз сто.&lt;/q&gt;, хотя сама я не курю...</code></pre>
+            </td>
+
+            <td> 
+                Мне из коротких цитат почему-то вспомнилась фраза Марка Твена: 
+<q>Бросить курить легко. Я сам бросал раз сто.</q>, хотя сама я не курю...
+            </td>
+        </tr>
+    </table>
+    <p>2.2. Тег <strong>&#60;blockquote&#62;</strong> для длинных цитат</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td> 
+                <pre><code>А вот у него же цитата подлинее: 
+&lt;blockquote&gt;Когда мне было четырнадцать, 
+мой отец был так глуп, что я с трудом переносил его; 
+но когда мне исполнился двадцать один год, 
+я был изумлен, насколько этот старый человек поумнел за 
+последние семь лет.&lt;/blockquote&gt;</code></pre>
+            </td>
+
+            <td> 
+                А вот у него же цитата подлинее:
+<blockquote>Когда мне было четырнадцать, мой отец был так глуп, что я с трудом 
+переносил его; но когда мне исполнился двадцать один год, я был изумлен, 
+насколько этот старый человек поумнел за последние семь лет.</blockquote>
+            </td>
+        </tr>
+    </table>
+    <p>2.3. Тег <strong>&#60;address&#62;</strong> &#8212; контактная информация об авторе</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td> 
+                <pre><code>&lt;address&gt;Пушкин Александр Сергеевич&lt;br&gt;  
+Михайловское &lt;br&gt; pushkin@mail.ru&lt;/address&gt;</code></pre>
+            </td>
+
+            <td> 
+                <address>Пушкин Александр Сергеевич<br>  
+                Михайловское <br> pushkin@mail.ru</address>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <h3>3. Программный код</h3>
+    <p>3.1. Тег <strong>&#60;pre&#62;</strong> &#8212; предварительно форматируемый текст</p>
+   <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td>
+                <strong>Пример</strong>
+            </td>
+
+            <td>
+                <strong>Результат примера</strong>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <pre><code>&lt;pre&gt;
+   ---|||||------
+   ||||----||||||
+   ---|||||------
+   ||||----||||||
+   ---|||||------
+   ||||----||||||
+   ---|||||------
+   ||||----||||||
+&lt;/pre&gt;</code></pre>
+            </td>
+
+            <td> 
+                <pre>
+---|||||------
+||||----||||||
+---|||||------
+||||----||||||
+---|||||------
+||||----||||||
+---|||||------
+||||----||||||
+                </pre>
+            </td>
+        </tr>
+    </table> 
+    <p>3.2. Тег <strong>&#60;tt&#62;</strong> для отображения моноширинного текста</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td> 
+                <pre><code>Так выглядит &lt;tt&gt;моноширинный текст&lt;/tt&gt;
+если кому интересно</code></pre>
+            </td>
+
+            <td> 
+                Так выглядит <tt>моноширинный текст</tt>, если кому интересно.
+            </td>
+        </tr>
+    </table> 
+    <p>3.3. Тег <strong>&#60;code&#62;</strong> для отображения части кода</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td> 
+                <pre><code>&lt;p&gt;Какая-то часть кода программы:&lt;p&gt;
+&lt;code&gt;function checkParent (src, dest) {&lt;br&gt;
+    while (src != null) {&lt;br&gt;
+    if (src.tagName == dest) return src&lt;br&gt;
+    src = src.parentElement&lt;br&gt;
+    }&lt;br&gt;
+    return null&lt;br&gt;
+   }&lt;/code&gt;</code></pre>
+            </td>
+           
+            <td> 
+               <p>Какая-то часть кода программы:</p>
+            <code>function checkParent (src, dest) {<br>
+                while (src != null) {<br>
+                  if (src.tagName == dest) return src<br>
+                   src = src.parentElement<br>
+                }<br>
+                return null<br>  
+            </td>
+        </tr>
+    </table> 
+    <p>3.4. Тег <strong>&#60;kbd&#62;</strong> для ввода с клавиатуры, включая названия клавиш</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td> 
+                <pre><code>Для копирования текста используйте комбинацию 
+клавиш &lt;kbd&gt; &#38;lt;Ctrl&#38;gt; + &#38;lt;C&#38;gt; &lt;/kbd&gt;</code></pre>
+            </td>
+           
+            <td> 
+                Для копирования текста используйте комбинацию клавиш <kbd>&lt;Ctrl&gt;+&lt;C&gt;</kbd>
+            </td>
+        </tr>
+    </table> 
+    <p>3.5. Тег <strong>&#60;var&#62;</strong> для выделения переменных в коде</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td> 
+                <pre><code>Так, выделитcя курсивом некоторая переменная  
+&lt;var&gt;new_var&lt;/var&gt; в коде программы</code></pre>
+            </td>
+           
+            <td> 
+                Так, выделитcя курсивом некоторая переменная <var>new_var</var> в коде программы
+            </td>
+        </tr>
+    </table> 
+<br>
+    <h3>4. Задание переносов</h3>
+    <p>4.1. Тег <strong>&#60;nobr&#62;</strong> для отображения текста без переноса 
+    с появлением горизонтальной полосы прокрутки</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td>
+                <strong>Пример</strong>
+            </td>
+
+            <td>
+                <strong>Результат примера</strong>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <pre><code>Пишем внутри тега какой-нибудь очень 
+длинный текст &lt;nobr&gt; Lorem, ipsum dolor sit amet 
+consectetur adipisicing elit. At, illum ad! Expedita 
+exercitationem autem quis itaque consequuntur accusamus 
+obcaecati iste ex, fugiat mollitia. Excepturi, 
+alias illum reprehenderit aspernatur error 
+repudiandae.&lt;/nobr&gt; Должна появиться 
+горизонтальная полоса прокрутки.</code></pre>
+            </td>
+
+            <td> 
+            Пишем внутри тега какой-нибудь очень длинный текст <nobr> 
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, illum ad! 
+Expedita exercitationem autem quis itaque consequuntur accusamus obcaecati 
+iste ex, fugiat mollitia. Excepturi, alias illum reprehenderit aspernatur error repudiandae.</nobr>
+Должна появиться горизонтальная полоса прокрутки.
+            </td>
+        </tr>
+    </table> 
+    <p>4.2. Тег <strong>&#60;wbr&#62;</strong> указывает браузеру место, где допускается 
+    делать перенос строки в тексте, если этого требует ширина родительского элемента</p>
+    <table width="60%" border="1" cellpadding="10">
+        <tr>
+            <td> 
+                <pre><code>Если нужно правильно перенести какое-нибудь длинное слово, например, название химического 
+вещества такого, как &lt;p&gt; фенантрен&lt;wbr&gt;хинон-&lt;wbr&gt;полиметил&lt;wbr&gt;метакрилат.&lt;/p&gt; 
+Это известный голографический материал.</code></pre>
+            </td>
+           
+            <td> 
+                Если нужно правильно перенести какое-нибудь длинное слово, 
+например,  название химического вещества такого, как: 
+<p>фенантрен<wbr>хинон-<wbr>полиметил<wbr>метакрилат.</p> 
+Это известный голографический материал.
+            </td>
+        </tr>
+    </table>   
+
+
+</body>
+</html>
