@@ -1,0 +1,11 @@
+body {
+    font-family: 'Philosopher-Regular';
+}
+
+p {
+    text-align: justify;
+}
+
+span {
+    font-family: 'Philosopher-Italic';
+}
