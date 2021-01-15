@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+    <style>
+        td {
+            padding: 5px;
+        }
+
+        area {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Тег &lt;area&gt; и карта изображений</h1>
+
+    <p>Тег &lt;area&gt; определяет область внутри карты изображений 
+    (карта изображений - это изображение с интерактивными областями).</p>
+
+    <p>Элементы &lt;area &gt; всегда вложены в тег &lt;map&gt;.</p>
+
+    <h2>Информация</h2>
+
+    <table border="1" style="border-collapse: collapse; width: 60%;">
+        <caption style="font-size: 18px;">Базовые атрибуты тега &lt;area&gt;</caption>
+        <tr>
+            <th>Атрибут</th>
+            <th>Значения</th>
+            <th>Описание</th>
+        </tr>
+        <tr>
+            <td>alt</td>
+            <td style="font-style: italic;">текст</td>
+            <td>задает альтернативный текст для области изображения</td>
+        </tr>
+        <tr>
+            <td>coords</td>
+            <td style="font-style: italic;">значения координат</td>
+            <td>задает координаты для области изображения</td>
+        </tr>
+        <tr>
+            <td>href</td>
+            <td style="font-style: italic;">URL</td>
+            <td>задает адрес документа, на который следует перейти</td>
+        </tr>
+        <tr>
+            <td>shape</td>
+            <td style="font-style: italic;">
+                default<br>
+                rect<br>
+                circle<br>
+                poly</td>
+            <td>определяет форму области изображения <br> (прямоугольник, круг или многоугольник)</td>
+        </tr>
+    </table>
+<br>
+    <table border="1" style="border-collapse: collapse; width: 60%;">
+        <caption style="font-size: 18px;">Значения атрибута coords</caption>
+        <tr>
+            <th>shape</th>
+            <th>Значения</th>
+            <th>Описание</th>
+        </tr>
+        <tr>
+            <td>rect</td>
+            <td>x1, y1, x2, y2</td>
+            <td>координаты верхней левой (x1, y1) и нижней правой (x2, y2) вершин прямоугольника</td>
+        </tr>
+        <tr>
+            <td>circle</td>
+            <td>x, y, r</td>
+            <td>координаты центра окружности (x, y) и ее радиус (r)</td>
+        </tr>
+        <tr>
+            <td>poly</td>
+            <td>x1, y1, x2, y2, .., xn, yn	</td>
+            <td>координаты вершин прямоугольника 
+                (если первая и последняя пары координат не совпадают, 
+                браузер добавит последнюю пару координат, чтобы закрыть многоугольник)</td>
+        </tr>
+    </table>
+
+    <p><span style="font-weight: bold;">Примечание:</span><br>
+    Для того, чтобы убрать/изменить контур от shape, можно использовать стилевое свойство outline.</p>
+
+    <h2>Пример</h2>
+    <p>Код:</p>
+    <div style="border: solid 1px blue; width: fit-content; padding: 5px;">       
+        <pre><code>&lt;img src="img/solar_system.webp" alt="Solar system" usemap="#planets" width="400"&gt;
+
+        &lt;map name="planets"&gt;               
+            &lt;area shape="circle" coords="56,158,46" href="earth.html" target="_blank" alt="Earth"&gt;
+            &lt;area shape="rect" coords="226,40,366,100" href="saturn.html" target="_blank" alt="Saturn"&gt;
+        &lt;/map&gt;</code></pre>
+    </div>
+
+    <p>Реализация (выберите одну из двух планет: Земля или Сатурн):</p>
+   
+    <img src="img/solar_system.webp" alt="Solar system" usemap="#planets" width="400">
+
+        <map name="planets">
+            <area shape="circle" coords="56,158,46" href="earth.html" target="_blank" alt="Earth">
+            <area shape="rect" coords="226,40,366,100" href="saturn.html" target="_blank" alt="Saturn">
+        </map>
+           
+
+</body>
+</html>

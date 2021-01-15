@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font</title>
+</head>
+<body>
+    <h2>Цвета в устаревшем теге &lt;font&gt;</h2>
+    <p style="font-style: italic;">Согласно заданию для ряда слов в тексте с помощью тега &lt;font&gt; указала цвет 
+        с соответствующими значениями color="#BruceWillis" и color="#Candy". <br>
+        Вот как они отображаются в браузере:
+    </p>
+   <p><font size="5" color="#BruceWillis">Lorem ipsum dolor sit amet</font>, consectetur adipisicing elit. 
+       Nulla sit, libero facilis expedita sequi ea quasi perferendis 
+       consequatur magni totam mollitia fugiat eligendi dolore eum. 
+       Consectetur qui minus dolorem. Eligendi!
+    </p>
+       
+    <p><font size="5" color="#Candy">Lorem ipsum dolor sit amet</font>, consectetur adipisicing elit. 
+        Nulla sit, libero facilis expedita sequi ea quasi perferendis 
+        consequatur magni totam mollitia fugiat eligendi dolore eum. 
+        Consectetur qui minus dolorem. Eligendi!
+    </p>
+
+    <p style="font-style: italic;">
+        Если посмотреть код страницы, то цвета для элементов под тегом будут другими, 
+        точнее записанными в стандартном 16-м коде: #B0E000 и #CA0D00.<br>
+        Вероятно, т.к. для записи цвета в 16-й системе исчисления помимо цифр от 0 до 9 
+        используется только первые 6 цифр алфавита: A B C D E и F, браузер все остальные буквы
+        заменяет нулем.<br>
+        Получается, например, чисто синий цвет можно записать не только как #0000FF, но и подставив
+        вместо первых четырех нулей любые буквы после F. Это можно проверить:
+    </p>
+
+    <p><font size="5" color="#yyyyff">Lorem ipsum dolor sit amet</font>, consectetur adipisicing elit. 
+        Nulla sit, libero facilis expedita sequi ea quasi perferendis 
+        consequatur magni totam mollitia fugiat eligendi dolore eum. 
+        Consectetur qui minus dolorem. Eligendi!
+    </p>
+
+    <p style="font-style: italic;">Да, получился синий цвет!</p>
+
+</body>
+</html>
