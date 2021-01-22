@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maket_table</title>
+    <!-- Блочная верстка (с помощью float) -->
+    <style>
+        /* сбрасываю почти все стилевые свойсвта */
+        *{
+            margin: 0;
+            /* padding: 0; */
+            box-sizing: border-box;
+        }
+
+        /* задаю шрифт Arial везде */
+        body {
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 14px; 
+        }
+
+        /* задаю стилизацию header и footer */
+        .header_footer {
+            background-color: rgb(173, 216, 230);
+            padding: 15px;
+            color: blue; 
+            text-align: center; 
+            text-transform: uppercase; 
+            font-size: 20px;
+        }
+        /* задаю дополнительную стилизацию footer, а именно "снимаю" обтекание для него */
+        .footer {
+            clear: both;
+        }
+
+        .wrapper {
+             /*чтобы оба фона: фон menu и фон из мячиков правильно отображались при изменении 
+             размера экрана для оберточного div делаю составной background:
+             1) слева размещаю полоску шириной 200px (жестко заданная ширина блока menu) и повторением по y 
+             2) картинку с мячом располагаю справа сверху и тоже повторяю по вертикали */
+                background: 
+                url('../img/band.jpg') no-repeat repeat top left,
+                url('../img/ball.png') no-repeat repeat top right;       
+        }
+
+        /* описываю распорку */
+        .spacer {
+            clear: both;
+        }
+        
+        /* задаю стилизацию бокового меню */
+        .menu {
+            float: left; /*обтекание слева*/
+            width: 200px; /*ширина блока задана жестко */
+            padding: 10px;
+        }
+
+        /* задаю стилизацию блока содержимого */
+        .content { 
+            margin-left: 200px; /*отступ равен ширине блока menu*/
+        }
+
+        /* задаю стилизацию для заголовка */
+        .football {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 15px; 
+        }
+
+        /* задаю стилизацию для картинки */
+        img {
+            float: left; /* обтекание слева */
+            margin: 0 20px 0 20px; /*отступы */
+        }
+
+    </style>
+</head>
+
+<body>
+        <!--header-->
+        <div class="header_footer">
+                <p>Привет участникам соревнований!</p>
+        </div>
+
+        <div class="wrapper">
+            <!--menu-->
+            <div class="menu">
+                <p style="font-weight:bold; margin: 10px 0;">Виды спорта:</p>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Speed_skating" title="Конькобежный спорт" target="_blank">конькобежный спорт</a> </li>
+                    <li><a href="https://en.wikipedia.org/wiki/Skiing" title="Лыжный спорт" target="_blank">лыжный спорт</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Biathlon" title="Биатлон" target="_blank">биатлон</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Football" title="Футбол" target="_blank">футбол</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Long-distance_running" title="Бег на длинные дистанции" target="_blank">бег на длинные дистанции</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Target_archery" title="Стрельба из лука" target="_blank">стрельба из лука</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/High_jump" title="Прыжки в высоту" target="_blank">прыжки в высоту</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Long_jump" title="Прыжки в длину" target="_blank">прыжки в длину</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Swimming_(sport)" title="Плавание" target="_blank">плавание</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Synchronized_swimming" title="Синхронное плавание" target="_blank">синхронное плавание</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Figure_skating" title="Фигурное катание" target="_blank">фигурное катание</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Chess" title="Шахматы" target="_blank">шахматы</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Draughts" title="Шашки" target="_blank">шашки</a></li>
+                </ul>
+            </div>
+
+            <!--content-->
+            <div class="content">
+                <!--заголовок-->
+                <p class="football">Футбол</p>
+                <!--картинка-->
+                <img src="../img/football.jpg" alt="football">
+                <!--текст-->
+                <p style="margin: 0 5px 20px 20px;">
+                    Футбо́л (англ. football от foot «ступня» + ball «мяч») — командный вид спорта, 
+                    в котором целью является забить мяч в ворота соперника ногами или другими частями 
+                    тела (кроме рук) большее количество раз, чем команда соперника. 
+                    В настоящее время самый популярный и массовый вид спорта в мире. <br><br>
+                    Есть 17 официальных правил игры, каждое из которых содержит список оговорок 
+                    и руководящих принципов. Эти правила предназначены для применения на всех уровнях 
+                    футбола, хотя есть некоторые изменения для таких групп, как юниоры, взрослые, женщины 
+                    и люди с ограниченными физическими возможностями. Законы очень часто формулировались 
+                    в общих чертах, которые позволяют упростить их применения в зависимости от характера игры. 
+                    Правила игры публикуются в ФИФА, но поддерживаются Международным советом футбольных ассоциаций 
+                    (IFAB). Каждая команда состоит максимум из одиннадцати игроков (без учёта запасных), один из которых 
+                    должен быть вратарём. Правила неофициальных соревнований могут уменьшить количество игроков, 
+                    максимум до 7. Вратари являются единственными игроками, которым позволено играть руками при 
+                    условии: они делают это в пределах штрафной площади у своих собственных ворот.
+                </p> 
+            </div>
+
+            <!--здесь размещаю "распорку", чтобы обтекание правильно выполнялось-->
+            <div class="spacer"></div>
+        </div>
+        
+        
+        <!--footer-->
+        <div class="header_footer footer">
+            <p>Главное не победа, а участие!</p>
+        </div>
+</body>
+</html>
