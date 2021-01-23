@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maket_table</title>
-    <!-- Блочная верстка (с помощью float) -->
+    <!-- Размещение 12 мячиков по углам блоков
+    После просмотра видео исправила, заменив на спец. подготовленную картинку из 2 мячиков на 20%,
+    с остальным все работает -->
     <style>
-        /* сбрасываю стилевые свойства */
         *{
             margin: 0;
             padding: 0; 
@@ -19,19 +20,17 @@
             соблюдаю правильный порядок фонов*/
                 /* верхние мячики */
                 url('img/ball3.png') no-repeat left top,
-                url('img/ball3.png') no-repeat right 79.4% top,
-                url('img/ball3.png') no-repeat 17.6% top,
                 url('img/ball3.png') no-repeat right top,
-                url('img/ball3.png') no-repeat right 200px top,
+                url('img/ball3.png') no-repeat right 200px top, /*нашла, что можно задавать position, делая отсчет справа*/
                 url('img/ball3.png') no-repeat right 160px top,
+                url('img/2balls_20%.png') no-repeat 20% top, /*составная картинка, как у Вас в видео*/ 
 
                  /* нижние мячики */
                 url('img/ball3.png') no-repeat left bottom,
-                url('img/ball3.png') no-repeat right 79.4% bottom,
-                url('img/ball3.png') no-repeat 17.6% bottom,
                 url('img/ball3.png') no-repeat right bottom,
                 url('img/ball3.png') no-repeat right 200px bottom,
                 url('img/ball3.png') no-repeat right 160px bottom,
+                url('img/2balls_20%.png') no-repeat 20% bottom,
 
                 /* трехцветный фон:
                 1) слева размещаю двухцветную полоску шириной 1500px, в которой 300px цвета menu 
@@ -42,34 +41,25 @@
                       
         }
 
-        /* описываю распорку */
         .spacer {
             clear: both;
         }
         
-        /* задаю стилизацию бокового меню */
         .menu {
             float: left; /*обтекание слева*/
             width: 20%; /*ширина блока задана в процентах */
             padding: 10px;
-            border: solid blue 1px;
-
-
         }
 
-        /* задаю стилизацию блока содержимого */
         .content { 
             margin-left: 20%; /*отступ слева равен ширине блока menu*/
             margin-right: 200px; /*отступ справа равен ширине блока banner*/
-            border: solid red 1px;
         }
 
-        /* задаю стилизацию блока содержимого */
        .banner {
             float: right; /*обтекание слева*/
             width: 200px; /*ширина блока задана жестко */
-            border: solid green 1px;
-       }
+        }
 
     </style>
 </head>
