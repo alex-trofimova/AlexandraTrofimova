@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        
+        /* Вначале задаю общую, т.е. для всех div стилизацию:
+            ввожу общий класс menu, для которого 
+            - li отображаются в строку с сохранением свойств блочного элемента
+            - есть отступы
+        */
+        .menu ul li {
+            display: inline-block;
+            margin-right: -4px;
+            padding: 5px 10px 10px 10px;
+        }
+        /*  - цвет ссылок зеленый */
+        .menu a {
+            color: green;
+        }
+        /*  - при наведении цвет меняется на красный */
+        .menu a:hover {
+            color: red;
+        }
+        /* Способ №1
+            использую стилевое свойство border-left
+            причем для всех li после 1-го */
+        .menu_with_border_left ul li ~ li{
+            border-left: 2px solid red;
+        }
+
+        /* Способ №2
+            использую аналогичное стилевое свойство border-right
+            причем для всех li кроме последнего */
+        .menu_with_border_right ul li:not(:last-child){
+            border-right: 2px solid red;
+        }
+        /* Способ №3
+            использую стилевое свойств border, левое и правое
+            причем только для четных li */
+        .menu_with_borders_even ul li:nth-child(even){
+            border-right: 2px solid red;
+            border-left: 2px solid red;
+        }
+
+
+        /* Способ №4
+            использую стилевой селектор псевдоэлемента before
+            снова для всех li кроме первого 
+            плюс дополнительно стилизую*/
+        .menu_with_before ul li:not(:first-child)::before{
+            content: ' | ';
+            color: red;
+            font-size: 35px;
+            font-weight: 600;
+            margin-left: -14px;
+            vertical-align: middle;
+        }
+
+        /* Способ №5
+            использую стилевой селектор псевдоэлемента after
+            снова для всех li кроме последнего 
+            плюс дополнительно стилизую*/
+        .menu_with_after ul li {
+            padding-left: 0;
+        }
+            
+        .menu_with_after ul li:not(:last-child)::after{
+            content: ' | ';
+            color: red;
+            font-size: 35px;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu menu_with_border_left">
+        Способ 1 <br> 
+        <ul> 
+            <li><a href="https://en.wikipedia.org/wiki/Google_Chrome" target="_blank">первая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Microsoft_Edge" target="_blank">вторая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Firefox" target="_blank">третья ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Opera_(web_browser)" target="_blank">четвертая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Internet_Explorer" target="_blank">пятая ссылка</a></li>
+        </ul>
+    </div>
+    <br>
+    
+    <div class="menu menu_with_border_right">
+        Способ 2 <br> 
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Google_Chrome" target="_blank">первая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Microsoft_Edge" target="_blank">вторая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Firefox" target="_blank">третья ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Opera_(web_browser)" target="_blank">четвертая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Internet_Explorer" target="_blank">пятая ссылка</a></li>
+        </ul>
+    </div>
+    <br>
+
+    <div class="menu menu_with_borders_even">
+        Способ 3 <br> 
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Google_Chrome" target="_blank">первая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Microsoft_Edge" target="_blank">вторая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Firefox" target="_blank">третья ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Opera_(web_browser)" target="_blank">четвертая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Internet_Explorer" target="_blank">пятая ссылка</a></li>
+        </ul>
+    </div>
+   <br>
+   
+    <div class="menu menu_with_before">
+        Способ 4 <br> 
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Google_Chrome" target="_blank">первая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Microsoft_Edge" target="_blank">вторая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Firefox" target="_blank">третья ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Opera_(web_browser)" target="_blank">четвертая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Internet_Explorer" target="_blank">пятая ссылка</a></li>
+        </ul>
+    </div>
+   <br>
+
+    <div class="menu menu_with_after">
+        Способ 5 <br> 
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Google_Chrome" target="_blank">первая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Microsoft_Edge" target="_blank">вторая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Firefox" target="_blank">третья ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Opera_(web_browser)" target="_blank">четвертая ссылка</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Internet_Explorer" target="_blank">пятая ссылка</a></li>
+        </ul>
+    </div>
+</body>
+</html>

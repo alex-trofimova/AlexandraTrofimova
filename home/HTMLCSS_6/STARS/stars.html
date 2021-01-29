@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stars</title>
+    <style>
+        /* Начальная раскраска */
+        .picture ul li {
+            display: inline-block;
+            background: url('star0.png') no-repeat;
+            width: 186px;
+            height: 196px;
+        }
+        /* Идея: при наведении на какую-либо звезду выполнять два действия:
+        1) закрашивать все красным ("вешаю" hover на весь ul) и
+        2) закрашивать белым все идущие после ("вешаю" hover
+         на li и меняю у элементов после, т.е. ~li) */
+
+        ul:hover li{
+            background: url('star1.png') no-repeat;
+        } 
+        
+        ul li:hover~li{
+            background: url('star0.png') no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="picture">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> 
+    </div>
+    
+</body>
+</html>
