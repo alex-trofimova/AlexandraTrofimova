@@ -1,0 +1,305 @@
+body {
+    height: 10000px;
+    font-size: 18px;
+    font-family: 'ProximaNova-Light';
+}
+
+.container {
+    width: 1307px;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.btn {
+    font-family: 'ProximaNova-Regular';
+    color: #FFFFFF;
+    background-image: url(../img/button.png);
+    background-size: cover;
+    width: 206px;
+    height: 51px;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+
+h1 {
+    font-family: 'ProximaNova-Bold';
+    font-size: 54px;
+    margin-top: 186px;
+}
+
+h2 {
+    font-family: 'ProximaNova-Bold';
+    font-size: 48px;
+}
+
+h3 {
+    font-family: 'ProximaNova-Bold';
+    font-size: 36px;
+}
+
+h4 {
+    font-family: 'ProximaNova-Bold';
+    font-size: 30px;
+}
+
+h5 {
+    font-family: 'ProximaNova-Bold';
+    font-size: 24px;
+}
+
+.small {
+    font-size: 14px;
+}
+
+
+/*header*/
+.header {
+    height: 1227px;
+    background: url('../img/header-bg.png') no-repeat center;
+    background-size: cover;
+    text-align: center;
+    
+}
+
+.logo {
+    margin-top: 52px;
+    float: left;
+}
+
+.logo span {
+    font-size: 36px;
+    font-family: 'ProximaNova-Light';
+}
+
+.header ul {
+    float: right;
+    margin-top: 64px;
+    font-family: 'ProximaNova-Regular';
+}
+
+.header ul li {
+    float: left;
+    margin: auto 0;
+    width: 102px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.header ul li:last-child {
+    border: solid 1px;
+    border-radius: 30px;  
+}
+
+.header p{
+    font-family: 'ProximaNova-Regular';
+    text-align: center;
+    margin-top: 10px;
+}
+
+.header .ask-for-price {
+    margin-top: 63px;
+}
+
+.scroll-down {
+    margin-top: 418px;
+    color: #FFFFFF;
+}
+
+/* code design */
+.code-design {
+    height: 522px;
+    background: url('../img/code-design.png') no-repeat center;
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.code-design span {
+    font-family: 'ProximaNova-Light'; 
+}
+
+.code-design ul li {
+    float: left;
+    width: 571px;
+    margin-top: 150px;
+    margin-bottom: 144px;
+}
+
+.code-design ul li:last-child {
+    float: right;
+}
+
+.code-design p {
+    margin-top: 21px;
+    margin-bottom: 40px;
+    line-height: 30px;
+}
+
+/* what we do */
+.what-we-do {
+    height: 849px;
+    text-align: center;
+
+}
+
+.what-we-do h2 {
+    margin-top: 100px;
+    margin-bottom: 113px;
+}
+
+.what-we-do ul li {
+    width: 571px;
+    float: left;
+    text-align: left;
+    margin-bottom: 85px;
+}
+
+.what-we-do ul li:nth-child(even) {
+    margin-left: 142px;
+}
+
+.what-we-do ul li div{
+    width: 136px;
+    height: 136px;
+    background-position: top 10px center;
+    background-repeat: no-repeat;
+    float: left;
+    margin-right: 46px;
+}
+
+.what-we-do ul li:nth-child(1) .icon {
+    background-image: url(../img/icon1.png);
+}
+.what-we-do ul li:nth-child(2) .icon {
+    background-image: url(../img/icon2.png);
+}
+.what-we-do ul li:nth-child(3) .icon {
+    background-image: url(../img/icon3.png);
+}
+.what-we-do ul li:nth-child(4) .icon {
+    background-image: url(../img/icon4.png);
+}
+
+.what-we-do p {
+    margin-top: 25px;
+    line-height: 30px;
+}
+
+.what-we-do .btn .ask-for-price {
+    margin-top: 110px;
+}
+/* portfolio */
+.portfolio ul li{
+    height: 481px;
+    width: 640px;
+    text-align: center;
+    color: #FFFFFF;          
+}
+
+.portfolio ul li:first-child {
+    float: left;
+    background: url(../img/portfolio1.png) top center no-repeat;
+}
+
+.portfolio ul li:last-child {
+    float: left;
+    background: url(../img/portfolio3.png) top center no-repeat;
+}
+
+.portfolio ul li:nth-child(2) {
+    float: left;
+    background: url(../img/cover.png) no-repeat,
+                url(../img/portfolio2.png) no-repeat;
+}
+
+.portfolio img {
+    display: block;
+    margin-top: 212px;
+}
+
+.portfolio ul li:last-child img {
+    margin-left: 580px;
+}
+
+.portfolio .text {
+    font-size: 16px;
+    margin: 136px auto 125px auto;
+    width: 387px;
+}
+
+.portfolio h4 {
+    margin-bottom: 19px;
+}
+
+.portfolio p {
+    line-height: 25px;
+}
+
+.portfolio .watch-more {
+    margin-top: 63px;
+}
+
+/* about us */
+.about-us {
+    height: 902px;
+    background: url(../img/about-bg.png) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 30px;
+}
+
+.about-us h2 {
+    padding-top: 115px;
+    margin-bottom: 38px;
+}
+
+.about-us span {
+    display: inline-block;
+    width: 699px;
+}
+
+.about-us ul li {
+    float: left;
+    width: 300px;
+    margin-top: 132px;
+}
+
+.about-us ul li h5 {
+    margin-top: 29px;
+    margin-bottom: 31px;
+}
+
+.about-us .watch-more {
+    margin-top: 110px;
+}
+
+/* map section */
+.map-section {
+    height: 607px;
+    background: url(../img/map.png) no-repeat center;
+    background-size: cover;
+}
+
+.map-section img {
+    display: block;
+    padding: 262px 908px 282px 963px;
+}
+
+/* footer */
+.footer-text {
+    text-align: center;
+    margin-top: 66px;
+    line-height: 30px;
+}
+
