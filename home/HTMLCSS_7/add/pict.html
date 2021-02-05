@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag picture</title>
+</head>
+<body>
+    <h1>Тег &lt;picture&gt;</h1>
+
+    <p>
+        Тег &lt;picture&gt; создает возможность гибко определять ресурсы изображения, а именно:<br>
+        при наличии нескольких источников будет использоваться первый, который соответствует предпочтениям. 
+    </p>
+
+    <p>
+        Элемент &lt;picture &gt; содержит два разных тега: 
+        один или несколько тегов &lt;source&gt; и один &lt;img&gt;.
+    </p>
+
+    <h2>Информация</h2>
+
+    <table border="1" style="border-collapse: collapse; width: 60%;">
+        <caption style="font-size: 18px;">Атрибуты тега &lt;source&gt;, обязательные для реализации эффекта</caption>
+        <tr>
+            <th>Атрибут</th>
+            <th>Описание</th>
+            <th>Пример</th>
+        </tr>
+        <tr>
+            <td>srcset</td>
+            <td>определяет URL-адрес изображения для отображения</td>
+            <td style="font-style: italic;">srcset="img1.png"</td>
+        </tr>
+        <tr>
+            <td>media</td>
+            <td>принимает любой допустимый запрос (указывается в CSS)</td>
+            <td style="font-style: italic;">media="(min-width: 400px)"</td>
+        </tr>
+    </table>
+
+    <h2>Пример</h2>
+
+    <p>Код:</p>
+    <div style="border: solid 1px blue; width: fit-content; padding: 10px;">       
+        <pre><code>&lt;picture&gt;
+    &lt;source media="(max-width: 1000px)" srcset="img/right.jpg"&gt;               
+    &lt;source media="(max-width: 1200px)" srcset="img/front.png"&gt;
+    &lt;img src="img/left.png" alt="Cars" style="width: auto;"&gt;
+&lt;/picture&gt;</code></pre>
+    </div>
+
+    <p>Реализация (поступательно изменяйте размер экрана и volvo будет "поворачиваться"):</p>
+   
+    <picture>
+        <source media="(max-width: 1000px)" srcset="img/right.jpg">
+        <source media="(max-width: 1200px)" srcset="img/front.png">
+        <img src="img/left.png" alt="Cars" style="width: auto;">
+    </picture>
+           
+</body>
+</html>

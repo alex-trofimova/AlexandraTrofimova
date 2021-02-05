@@ -1,0 +1,54 @@
+@media all and (max-width: 726px) {
+    .header_footer {
+        padding: 10px;
+        font-size: 18px;
+    }
+    
+    img {
+        float: none;
+        display: block; 
+        margin: 0 auto; 
+    }
+
+    .text {
+        margin-top: 15px;
+    }
+}
+
+@media all and (max-width: 560px) {
+    
+    .header_footer {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .wrapper {
+        background: url('img/ball.png') no-repeat repeat top right;       
+}
+    
+    .menu {
+        width: 100%;
+        float: none;
+        background: url('img/band.jpg') repeat repeat top left;
+    }
+
+    .menu ul li {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 12px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .football {
+        padding: 10px;
+        font-size: 14px; 
+    }
+
+    .text {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+}
