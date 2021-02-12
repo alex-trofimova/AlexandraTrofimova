@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+  }
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.wrapper, .comments {
+    display: table;
+    width: 100%;
+    margin: 7px 0;
+}
+
+.wrapper label, .comments label {
+    display: table-cell;
+    width: 200px;
+}
+
+.wrapper .radio label {
+    width: auto;
+    padding-right: 5px;
+}
+
+.wrapper input[type="text"] {
+    display: table-cell;
+    width: 100%;
+}
+
+.wrapper select, .wrapper .radio, 
+.wrapper input[type="checkbox"] {
+    display: table-cell;
+}
+
+.text textarea {
+    width: 100%; 
+}
+

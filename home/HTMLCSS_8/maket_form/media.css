@@ -1,0 +1,19 @@
+@media all and (max-width: 570px) {
+    .wrapper label {
+        display: table-row;
+    }
+
+
+    .wrapper input[type="text"] {
+        display: table-row;
+        width: 100%;
+    }
+    
+    .wrapper select, .wrapper .radio{
+        display: table-row;
+    }
+
+    .comments label {
+        width: 175px;
+    }
+}

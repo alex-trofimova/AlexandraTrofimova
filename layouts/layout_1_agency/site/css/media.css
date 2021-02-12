@@ -1,0 +1,351 @@
+@media all and (max-width: 1918px) {
+    .portfolio ul li:last-child {
+        float: right;
+    }
+    
+    .portfolio ul li:nth-child(2) {
+        float: none;
+        clear: both;
+        margin: 0 auto;
+        background: url(../img/cover.png) no-repeat,
+                    url(../img/portfolio2.png) no-repeat;
+    }
+}
+
+/* для экрана шириной 1366px */
+@media all and (max-width: 1366px) {
+    .container {
+        width: 1140px;
+    }
+    .code-design ul li {
+        width: 500px;
+        margin: 100px 20px;
+    }
+
+    .what-we-do h2 {
+        padding-top: 70px;
+        margin-bottom: 75px;
+    }
+
+    .what-we-do ul li {
+        width: 450px;
+        margin-bottom: 20px;
+    }
+
+    .what-we-do .btn .ask-for-price {
+        margin-top: 70px;
+    }
+    
+    .about-us h2 {
+        padding-top: 35px;
+    }
+
+    .about-us ul li {
+        width: 445px;
+        margin-top: 40px;
+    }
+ 
+    .about-us ul li:nth-child(even) {
+        float: right;
+    }
+    .about-us ul li h5 {
+        margin: 18px 0 21px 0;
+    }
+    
+    .about-us .watch-more {
+        margin-top: 25px;
+    }
+    
+    .portfolio ul li{
+        height: 343px;
+        width: 455px;
+    }
+
+    .portfolio .watch-more {
+        margin-top: 30px;
+    }
+
+    .portfolio ul li:last-child {
+        float: left;
+    }
+    
+    .portfolio ul li:nth-child(2) {
+        float: left;
+        clear: none;
+    }
+
+    .portfolio img {
+        margin-top: 176px;
+    }
+
+    .portfolio .text {
+        padding-top: 60px;
+    }
+    
+    .portfolio ul li:last-child img {
+        margin-left: 416px;
+    }
+
+}
+
+/* для экранов от 1365px */
+@media all and (max-width: 1365px) {
+
+    .portfolio ul li{
+        height: 343px;
+        width: 455px;
+    }
+
+    .portfolio .watch-more {
+        margin-top: 30px;
+    }
+
+    .portfolio ul li:last-child {
+        float: right;
+    }
+    
+    .portfolio ul li:nth-child(2) {
+        float: none;
+        clear: both;
+        margin: 0 auto;
+    }
+
+
+}
+
+/* для экранов от 1160px */
+@media all and (max-width: 1160px) {
+    .container {
+        width: 900px;
+    }
+
+    .logo {
+        float: none;
+        margin: 0 auto;
+        padding-top: 30px;  
+    }
+
+    .header ul {
+        float: none;
+        width: 514px;
+        margin: 30px auto 0 auto;
+    }
+
+    .code-design ul li {
+        width: 450px;
+        margin: 100px 0;
+    }
+
+    .what-we-do {
+        height: 720px;
+    }
+
+    .what-we-do ul li:nth-child(even) {
+        margin-left: 0;
+    }
+
+    .what-we-do ul li div{
+        background-position: top 5px center;
+        margin: 0 10px 20px 0;
+    }
+
+    .what-we-do h2 {
+        padding-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .what-we-do .btn .ask-for-price {
+        margin-top: 0;
+    }
+
+    /* для экранов от 940px */
+@media all and (max-width: 940px) {
+    .container {
+        width: 800px;
+    }
+
+    .code-design {   
+        background: url(../img/best-design-bg.png) no-repeat bottom center,
+                    url(../img/best-code-bg.png) no-repeat top center;           
+        }
+    
+    .code-design ul li {
+            float: none;
+            width: 100%;
+            margin: auto;
+            padding-top: 30px;
+        }
+
+    .what-we-do {
+            height: 840px;
+        }
+
+    .what-we-do ul li {
+        width: 100%;
+    }
+
+    .what-we-do ul li div{
+        margin: 0 20px 0 0;
+        height: 136px;
+    } 
+
+    .about-us {
+        height: 1440px;
+    }
+
+    .about-us ul li {
+        float: none;
+        width: 100%;
+        margin: 40px auto;
+    }
+
+    .about-us ul li h5 {
+        margin: 8px 0 8px 0;
+    }
+}
+
+  /* для экранов от 830px */
+  @media all and (max-width: 830px) {
+    .container {
+        width: 300px;
+    }
+
+    h1 {
+        font-size: 42px;
+        margin-top: 100px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .btn {
+        font-size: 16px;
+        width: 160px;
+        height: 40px;
+    }
+
+    .header {
+        height: 890px;
+    }
+
+    .header ul {
+        width: 300px;
+    }
+
+    .header ul li {
+        float: none;
+        margin: 0 auto;
+        width: 100px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .scroll-down {
+        margin-top: 100px;
+    }
+
+    .code-design ul li {
+        width: 280px;
+        padding-top: 25px;
+    }
+
+    .code-design ul li:last-child {
+        float: none;
+    }
+
+    .code-design p {
+        margin-top: 14px;
+        margin-bottom: 28px;
+        line-height: 20px;
+    }
+
+    .what-we-do {
+        height: 1130px;
+    }
+
+    .what-we-do h2 {
+        padding-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .what-we-do ul li,  .what-we-do ul li div{
+        float: none;
+        width: 100%;
+        margin: 20px auto;
+        text-align: center; 
+    }
+    .what-we-do ul li div {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        height: 110px;
+    }
+    
+    .what-we-do p {
+        line-height: 20px;
+    }
+
+    .portfolio ul li {
+        height: 226px;
+        width: 300px;
+    }
+
+    .portfolio ul li:first-child, 
+    .portfolio ul li:last-child {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .portfolio img {
+        display: block;
+        padding-top: 100px;
+        margin-top: 0;
+    }
+
+    .portfolio ul li:last-child img {
+        margin-left: 240px;
+    }
+
+    .portfolio .text {
+        width: fit-content;
+        padding-top: 30px;
+    }
+
+    .portfolio p {
+        line-height: 20px;
+    }
+
+    .about-us span {
+        width: 280px;
+    }
+
+    .about-us ul li {
+        margin: 30px auto;
+    }
+
+    .about-us span {
+        font-size: 14px;
+        line-height: 20px; 
+    }
+
+    .footer-text {
+        font-size: 12px;
+        margin-top: 20px;
+        line-height: 15px;
+    }
+ 

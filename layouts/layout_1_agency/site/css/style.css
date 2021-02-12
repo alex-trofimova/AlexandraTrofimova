@@ -89,7 +89,7 @@ h5 {
 
 .header ul li {
     float: left;
-    margin: auto 0;
+    margin: 0 auto;
     width: 102px;
     height: 40px;
     line-height: 40px;
@@ -147,13 +147,12 @@ h5 {
 
 /* what we do */
 .what-we-do {
-    height: 849px;
+    height: 950px;
     text-align: center;
-
 }
 
 .what-we-do h2 {
-    margin-top: 100px;
+    padding-top: 100px;
     margin-bottom: 113px;
 }
 
@@ -161,7 +160,7 @@ h5 {
     width: 571px;
     float: left;
     text-align: left;
-    margin-bottom: 85px;
+    margin-bottom: 65px;
 }
 
 .what-we-do ul li:nth-child(even) {
@@ -170,11 +169,11 @@ h5 {
 
 .what-we-do ul li div{
     width: 136px;
-    height: 136px;
+    height: 194px;
     background-position: top 10px center;
     background-repeat: no-repeat;
     float: left;
-    margin-right: 46px;
+    margin: 0 46px 40px 0;
 }
 
 .what-we-do ul li:nth-child(1) .icon {
@@ -209,6 +208,7 @@ h5 {
 .portfolio ul li:first-child {
     float: left;
     background: url(../img/portfolio1.png) top center no-repeat;
+    background-size: cover;
 }
 
 .portfolio ul li:last-child {
@@ -220,6 +220,7 @@ h5 {
     float: left;
     background: url(../img/cover.png) no-repeat,
                 url(../img/portfolio2.png) no-repeat;
+    background-size: cover;
 }
 
 .portfolio img {
@@ -233,7 +234,8 @@ h5 {
 
 .portfolio .text {
     font-size: 16px;
-    margin: 136px auto 125px auto;
+    margin: 0 auto;
+    padding-top: 136px;
     width: 387px;
 }
 
@@ -257,6 +259,7 @@ h5 {
     text-align: center;
     color: #FFFFFF;
     line-height: 30px;
+    margin: 0 auto;
 }
 
 .about-us h2 {
@@ -271,13 +274,12 @@ h5 {
 
 .about-us ul li {
     float: left;
-    width: 300px;
-    margin-top: 132px;
+    width: 320px;
+    margin: 132px auto 0 auto;
 }
 
 .about-us ul li h5 {
-    margin-top: 29px;
-    margin-bottom: 31px;
+    margin: 29px 0 31px 0;
 }
 
 .about-us .watch-more {
@@ -293,7 +295,8 @@ h5 {
 
 .map-section img {
     display: block;
-    padding: 262px 908px 282px 963px;
+    margin: 0 auto;
+    padding-top: 262px;
 }
 
 /* footer */
@@ -302,4 +305,6 @@ h5 {
     margin-top: 66px;
     line-height: 30px;
 }
+
+
 
