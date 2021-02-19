@@ -1,0 +1,32 @@
+.images {
+  text-align: center;
+  position: relative;
+  height: 400px;
+}
+
+img {
+  position: absolute;
+}
+
+.images img:hover {
+  z-index: 2;
+  background-color: white;
+}
+
+.images img:nth-child(1) {
+  left: 100px;
+}
+
+.images img:nth-child(2) {
+  left: 300px;
+}
+
+.images img:nth-child(3) {
+  left: 170px;
+  top: 45px;
+  z-index: 1;
+}
+.images img:nth-child(4) {
+  left: 200px;
+  top: 190px;
+}
