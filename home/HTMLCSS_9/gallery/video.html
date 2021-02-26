@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видео через youtube</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        p {
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 420px;
+            height: 500px;
+            overflow-y: scroll;
+            margin-left: 10px;
+        }
+
+        iframe {
+            width: 400px;
+            margin-top: 15px;
+        }
+
+        iframe:first-child {
+            margin-top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Мои любимые саундтреки:</p>
+    <div class="container">
+        <iframe width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/nWcWgBCPj1c" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+        <br>
+        <a href="https://youtu.be/nWcWgBCPj1c" target="_blank">смотреть в отдельном окне</a>
+
+        <iframe width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/aERhM81gQWc" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+        <br>
+        <a href="https://youtu.be/aERhM81gQWc" target="_blank">смотреть в отдельном окне</a>
+
+        <iframe width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/IguXWKJSqDE" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+        <br>
+        <a href="https://youtu.be/IguXWKJSqDE" target="_blank">смотреть в отдельном окне</a>
+
+    </div>
+    
+</body>
+</html>

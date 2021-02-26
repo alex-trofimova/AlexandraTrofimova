@@ -1,0 +1,27 @@
+@media all and (max-width: 560px) {
+  .header-footer {
+    display: none;
+  }
+
+  .main {
+    flex-direction: column-reverse;
+    background: none;
+  }
+
+  img {
+    float: none;
+    display: block;
+    margin: 0 auto 5px;
+  }
+
+  .menu {
+    background-color: transparent;
+    width: fit-content;
+    margin-left: 10px;
+  }
+
+  .menu ul li {
+    display: inline-block;
+    margin: 0 20px 5px 0;
+  }
+}
