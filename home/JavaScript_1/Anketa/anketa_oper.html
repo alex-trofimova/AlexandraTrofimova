@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anketa_oper</title>
+</head>
+<body>
+
+
+<script>
+    var surname = prompt('Ваша фамилия?');
+    var firstName = prompt('Ваше имя?');
+    var secondName = prompt('Ваше отчество?');
+
+    var age = parseInt(prompt('Сколько Вам полных лет?'))
+    age=(age>90 || age<0)?parseInt(prompt('Укажите, пожалуйста, Ваш реальный возраст!')):age;
+    age=(age>90 || age<0)?0:age;
+   
+    var gender = confirm('Если Вы - мужчина, нажмите OK, если женщина - ОТМЕНА');
+    var genderStr=(gender == true)?'мужской':'женский';
+    
+    var retire=((gender=false && age>=58)||(gender=true && age>=63))?'да':'нет';
+    
+    alert('Ваше ФИО: '+surname+' '+firstName+' '+secondName+
+          '\nВаш возраст в годах: ' +age+
+          '\nВаш возраст в днях: ' +(age*365)+
+          '\nчерез 5 лет Вам будет: ' +(age+5)+
+          '\nВаш пол: ' +genderStr+
+          '\nВы на пенсии: ' +retire);
+
+</script>    
+</body>
+</html>
