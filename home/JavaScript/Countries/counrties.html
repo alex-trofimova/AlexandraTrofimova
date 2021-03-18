@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <style>
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Хэш стран</h2>
+    <input type="button" value="Ввод информации о стране" onclick='inputData( )'><br>
+    <input type="button" value="Получение информации о стране" onclick='getData( )'> <br>
+    <input type="button" value="Перечень всех стран" onclick='getList( )'><br>
+    <input type="button" value="Удаление информации о стране" onclick='deleteData( )'>
+    
+<script>
+
+// создание (объявление) объекта
+var countrysH={};
+
+// 1) функция для кнопки Ввод информации о стране
+function inputData ( ) {
+    var countryName = prompt ('Введите название страны:');
+    var capitalName = prompt ('... и ее столицы:');
+    addCountry(countryName,capitalName);
+}
+
+// библиотечная функция ввода
+function addCountry(countryName,capitalName) {
+        countrysH[countryName]=capitalName;
+    }
+
+// 2) функция для кнопки Получение информации о стране
+function getData ( ) {
+    var countryName = prompt ('Введите название страны, которая Вас интересует:');
+    getCountryInfo(countryName);
+    alert (getCountryInfo(countryName));
+}
+
+// библиотечная функция получения такой информации
+function getCountryInfo(countryName) {
+        if ( countryName in countrysH )
+            return 'страна: ' + countryName + ' столица: ' + countrysH[countryName] ;
+        else
+            return 'нет информации о стране ' + countryName + '!' ;
+    }
+
+// 3) функция для кнопки Перечень всех стран
+function getList ( ) {
+    var res = "";
+    for (key in countrysH)
+    res+='\n'+getCountryInfo(key);
+    console.log ("список стран:" + res);
+}
+
+// 4) функция для кнопки Удаление информации о стране
+function deleteData() {
+    var countryName = prompt ('Введите название страны, информацию о которой нужно удалить:');
+    deleteCountry(countryName);
+}
+
+// библиотечная функция удаления информации
+function deleteCountry(countryName) {
+        delete countrysH[countryName];
+}
+
+</script>    
+</body>
+</html>
