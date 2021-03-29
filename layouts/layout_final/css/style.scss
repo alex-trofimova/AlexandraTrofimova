@@ -1,0 +1,1631 @@
+@import "variable";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: $nunitoSans;
+  font-size: $fdef;
+  color: $text;
+
+  @include myMedia($md5) {
+    font-size: 14px;
+  }
+
+  &.lock {
+    @include myMedia($md4) {
+      overflow: hidden;
+    }
+  }
+}
+
+section {
+  &:hover {
+    & h2::before {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: $montserrat;
+  font-size: $fbig;
+
+  @include myMedia($md5) {
+    font-size: $flarge;
+    display: inline-block;
+    width: 200px;
+  }
+}
+
+h2 {
+  font-family: $montserrat;
+  font-size: $flarge;
+  margin-bottom: 50px;
+  display: inline-block;
+  padding-bottom: 15px;
+  position: relative;
+
+  @include myMedia($md4) {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    font-size: $freview;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    width: 30%;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    border-bottom: 2px solid $orange;
+
+    transition: width 0.8s ease-in-out, opacity 0.1s;
+    transform: translateX(-50%);
+  }
+}
+
+.container {
+  width: $md1;
+  margin: 0 auto;
+
+  @include myMedia($md2) {
+    width: 975px;
+  }
+
+  @include myMedia($md3) {
+    width: 740px;
+  }
+
+  @include myMedia($md4) {
+    width: 545px;
+  }
+
+  @include myMedia($md5) {
+    width: 300px;
+  }
+}
+
+//home page
+//header
+.header {
+  background-color: $grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+
+  :hover .fa-flask {
+    animation: wobble 2s infinite;
+    color: $orange;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    z-index: 2;
+  }
+
+  &_fix-body {
+    background-color: $white;
+    border-bottom: solid 1px $grey;
+  }
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    height: 60px;
+
+    @include myMedia($md4) {
+      height: 50px;
+    }
+  }
+
+  &_menu {
+    @include myMedia($md4) {
+      position: fixed;
+      top: 0;
+      right: -50%;
+      width: 50%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 70px 10px 20px 10px;
+      transition: 0.5s ease-in-out;
+    }
+
+    @include myMedia($md5) {
+      right: -75%;
+      width: 75%;
+    }
+
+    &.active {
+      right: 0;
+    }
+  }
+
+  &_list {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    @include myMedia($md4) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    & li {
+      margin: 0 20px 0 0;
+
+      @include myMedia($md4) {
+        margin: 0 20px 40px 0;
+      }
+    }
+  }
+
+  &_link {
+    font-family: $montserrat;
+    font-size: $fsmall;
+    color: inherit;
+    transition: color 0.3s ease 0s;
+
+    @include myMedia($md4) {
+      font-size: $fmed;
+      color: $white;
+      text-align: right;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &_burger {
+    display: none;
+
+    @include myMedia($md4) {
+      display: block;
+      position: relative;
+      right: 20px;
+      width: 30px;
+      height: 20px;
+      z-index: 3;
+    }
+
+    &.active:before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+
+    &.active:after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+
+    &.active span {
+      transform: scale(0);
+    }
+  }
+
+  &_burger span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $black;
+    top: 9px;
+    transition: 0.3s ease;
+  }
+
+  &_burger:before,
+  &_burger:after {
+    content: "";
+    background-color: $black;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: 0.3s ease;
+  }
+
+  &_burger:before {
+    top: 0;
+  }
+
+  &_burger:after {
+    bottom: 0;
+  }
+
+  &_logo {
+    position: relative;
+    z-index: 3;
+    left: 20px;
+
+    & i {
+      display: block;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: $fdef;
+    }
+  }
+}
+
+// main content of the page
+
+// greeting
+.greeting {
+  background-color: $grey;
+  margin-top: 60px;
+
+  & .container {
+    display: flex;
+
+    @include myMedia($md5) {
+      flex-direction: column;
+    }
+  }
+  &_content {
+    padding: 12% 0;
+
+    @include myMedia($md5) {
+      text-align: center;
+    }
+  }
+
+  &_text-up {
+    font-size: $fsmall;
+    font-family: $montserrat;
+    text-transform: uppercase;
+  }
+
+  & h1 {
+    margin: 20px 0;
+  }
+
+  &_text-down {
+    font-size: $fmed;
+    font-family: $montserrat;
+
+    @include myMedia($md5) {
+      font-size: $fdef;
+    }
+  }
+
+  &_photo {
+    width: 240px;
+    margin: auto 120px;
+    box-shadow: 10px -10px 10px rgba(250, 151, 48, 0.5);
+
+    @include myMedia($md5) {
+      margin: 20px auto;
+    }
+  }
+}
+//about me
+.aboutMe {
+  background-color: $white;
+
+  &_content {
+    padding: 80px 22%;
+    text-align: center;
+
+    @include myMedia($md5) {
+      padding: 5% 10%;
+    }
+  }
+
+  &_text {
+    @include myMedia($md5) {
+      text-align: justify;
+    }
+  }
+}
+
+//numbers
+.numbers {
+  background-color: $orange;
+  color: $white;
+
+  &_list {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    padding: 80px 0;
+
+    @include myMedia($md2) {
+      justify-content: center;
+      padding: 40px 0 0 0;
+    }
+
+    @include myMedia($md4) {
+      padding: 30px 0 0 0;
+    }
+  }
+
+  &_icons {
+    font-size: 40px;
+    margin-right: 28px;
+
+    & .fa-user {
+      margin-right: 10px;
+    }
+
+    & .fa-chart-bar {
+      margin-right: 5px;
+    }
+  }
+
+  &_content {
+    display: flex;
+
+    @include myMedia($md2) {
+      width: 290px;
+      margin: 0 40px 40px 0;
+    }
+
+    @include myMedia($md4) {
+      margin: 0 0 30px 0;
+    }
+
+    @include myMedia($md5) {
+      width: 250px;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &_text {
+    text-transform: uppercase;
+
+    & span {
+      font-size: $fmed;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    & p {
+      font-size: $fsmall;
+    }
+  }
+}
+
+//lessons
+.lessons {
+  &_content {
+    display: flex;
+
+    @include myMedia($md3) {
+      flex-direction: column;
+    }
+  }
+
+  &_content-right {
+    background: url(../img/lesson-right-bg.jpg) no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 546px;
+
+    @include myMedia($md3) {
+      width: 100%;
+      height: 355px;
+    }
+
+    @include myMedia($md5) {
+      height: 200px;
+    }
+  }
+
+  &_content-left {
+    background: url(../img/lesson-left-bg.jpg) no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 546px;
+    padding: 10% 60px 0 8%;
+
+    @include myMedia($md3) {
+      width: 100%;
+      height: auto;
+      padding: 30px 8%;
+      text-align: center;
+    }
+
+    @include myMedia($md3) {
+      padding: 30px 1%;
+    }
+
+    & h2::before {
+      border-bottom: 0;
+    }
+  }
+
+  &_container {
+    width: 470px;
+    margin: 0 0 0 auto;
+
+    & h2::before {
+      border-bottom: 0;
+    }
+
+    @include myMedia($md2) {
+      width: 400px;
+    }
+
+    @include myMedia($md3) {
+      margin: 0 auto;
+    }
+
+    @include myMedia($md5) {
+      width: 300px;
+    }
+  }
+
+  &_block {
+    margin-bottom: 33px;
+
+    @include myMedia($md5) {
+      padding: 0 2px;
+    }
+  }
+
+  &_text {
+    font-size: $fsmall;
+    font-family: $montserrat;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+
+    @include myMedia($md5) {
+      font-size: $fsmall;
+    }
+
+    & span {
+      margin-left: 10px;
+      font-weight: 600;
+    }
+  }
+
+  &_line {
+    height: 4px;
+    width: 100%;
+    background-color: $darkgrey;
+
+    & div {
+      background-color: $orange;
+      height: 100%;
+    }
+  }
+}
+//price
+.price {
+  background-color: $white;
+  font-family: $montserrat;
+
+  &_content {
+    padding: 80px 0;
+    text-align: center;
+
+    @include myMedia($md3) {
+      padding: 60px 0;
+    }
+
+    @include myMedia($md3) {
+      padding: 30px 0;
+    }
+  }
+
+  &_text {
+    margin-bottom: 80px;
+
+    @include myMedia($md4) {
+      margin-bottom: 60px;
+    }
+
+    @include myMedia($md5) {
+      margin-bottom: 40px;
+      display: inline-block;
+      width: 260px;
+    }
+  }
+
+  &_programs {
+    display: flex;
+    justify-content: space-between;
+
+    @include myMedia($md3) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &_option {
+    width: 30%;
+    transition: margin-top 1s;
+
+    @include myMedia($md3) {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
+    &:hover {
+      margin-top: -45px;
+    }
+
+    &:hover &-hidden {
+      height: 50px;
+    }
+
+    &:hover &-hidden span {
+      opacity: 1;
+      padding-top: 5px;
+    }
+
+    &-name {
+      background-color: $text;
+      height: 60px;
+      font-size: $fprice;
+      line-height: 60px;
+      margin-bottom: 2px;
+      color: $white;
+      text-transform: uppercase;
+    }
+
+    &-cost {
+      background-color: $text;
+      color: $white;
+      height: 140px;
+      padding: 6% 0;
+      line-height: 200%;
+
+      @include myMedia($md3) {
+        height: 100px;
+        padding: 0;
+      }
+    }
+
+    &-hidden {
+      height: 5px;
+      background-color: $orange;
+      transition: height 1s;
+
+      & span {
+        display: inline-block;
+        opacity: 0;
+        color: $white;
+      }
+    }
+
+    &-details li {
+      height: 60px;
+      margin-bottom: 2px;
+      background-color: $grey;
+      font-size: 14px;
+      display: flex;
+
+      & span {
+        display: inline-block;
+        margin: auto;
+      }
+    }
+  }
+}
+
+//reviews
+.reviews {
+  background-color: $orange;
+
+  &_slider {
+    position: relative;
+
+    &-item {
+      padding: 40px 0;
+      font-family: $montserrat;
+      text-align: center;
+      color: $white;
+      font-size: $fmed;
+      display: block;
+      margin: auto;
+
+      @include myMedia($md3) {
+        padding: 30px 0;
+        font-size: $fdef;
+      }
+
+      @include myMedia($md5) {
+        padding: 5px 0;
+        font-size: $fsmall;
+      }
+
+      & p {
+        display: inline-block;
+        width: 94%;
+
+        @include myMedia($md3) {
+          width: 80%;
+          text-align: justify;
+        }
+      }
+
+      & span {
+        display: block;
+        margin-top: 30px;
+        font-size: $fmed;
+        text-transform: uppercase;
+
+        @include myMedia($md5) {
+          margin-top: 10px;
+          font-size: $fdef;
+        }
+      }
+    }
+  }
+}
+// slider
+.slick {
+  &-track {
+    display: flex;
+  }
+
+  &-list {
+    overflow: hidden;
+  }
+
+  &-arrow {
+    position: absolute;
+    top: 50%;
+    width: 21px;
+    height: 25px;
+    z-index: 10;
+    font-size: 0;
+    border: 0;
+
+    &.slick-prev {
+      left: 0;
+      background: url(../img/slide-arrow-left.png) no-repeat;
+      background-size: 100%;
+    }
+    &.slick-next {
+      right: 0;
+      background: url(../img/slide-arrow-right.png) no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+
+//blog
+.blog {
+  background-color: $white;
+
+  &_content {
+    padding: 80px 0 20px 0;
+    text-align: center;
+
+    @include myMedia($md3) {
+      padding: 75px 0;
+    }
+
+    @include myMedia($md4) {
+      padding: 60px 0;
+    }
+  }
+
+  &_gallery {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+
+  &_item {
+    width: 255px;
+    height: 255px;
+    margin: 1%;
+    background-color: green;
+    display: inline-block;
+    position: relative;
+    background-size: cover;
+    border: solid 1px $grey;
+
+    @include myMedia($md5) {
+      margin: 2%;
+    }
+
+    &-hidden {
+      display: none;
+    }
+
+    & span {
+      font-family: $montserrat;
+      font-size: $fmed;
+      display: block;
+      position: absolute;
+    }
+
+    &:nth-child(1) {
+      background-image: url(../img/blog-1.png);
+      & span {
+        left: 64px;
+        top: 20px;
+      }
+    }
+    &:nth-child(2) {
+      background-image: url(../img/blog-2.png);
+      & span {
+        width: 84%;
+        color: $white;
+        left: 8%;
+        top: 85px;
+      }
+    }
+    &:nth-child(3) {
+      background-image: url(../img/blog-3.png);
+      & span {
+        width: 40%;
+        left: 18px;
+        top: 140px;
+      }
+    }
+    &:nth-child(4) {
+      background-image: url(../img/blog-4.png);
+      & span {
+        color: $white;
+        width: 50%;
+        left: 25%;
+        top: 40%;
+      }
+    }
+    &:nth-child(5) {
+      background-image: url(../img/blog-5.png);
+      & span {
+        color: $white;
+        width: 60%;
+        left: 20%;
+        top: 40%;
+      }
+    }
+    &:nth-child(6) {
+      background-image: url(../img/blog-6.png);
+      & span {
+        width: 70%;
+        left: 15%;
+        bottom: 22px;
+      }
+    }
+    &:nth-child(7) {
+      background-image: url(../img/blog-7.png);
+      & span {
+        color: $white;
+        width: 50%;
+        left: 25%;
+        top: 40%;
+      }
+    }
+    &:nth-child(8) {
+      background-image: url(../img/blog-8.png);
+      & span {
+        color: $white;
+        width: 37%;
+        right: 3%;
+        bottom: 66px;
+      }
+    }
+    &:nth-child(9) {
+      background-image: url(../img/blog-9.png);
+      & span {
+        color: $white;
+        width: 70%;
+        right: 15%;
+        bottom: 20px;
+      }
+    }
+    &:nth-child(10) {
+      background-image: url(../img/blog-10.png);
+      & span {
+        color: $white;
+        width: 50%;
+        left: 25%;
+        bottom: 42%;
+      }
+    }
+    &:nth-child(11) {
+      background-image: url(../img/blog-11.png);
+
+      & span {
+        color: $white;
+        width: 50%;
+        right: 3%;
+        bottom: 42%;
+      }
+    }
+    &:nth-child(12) {
+      background-image: url(../img/blog-12.png);
+      & span {
+        color: $white;
+        width: 50%;
+        left: 25%;
+        bottom: 42%;
+      }
+    }
+
+    &:hover .blog_moreDetails {
+      opacity: 1;
+    }
+  }
+
+  &_moreDetails {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  & img {
+    position: absolute;
+    top: 42%;
+    left: 42%;
+  }
+
+  &_btn {
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-family: $montserrat;
+    padding: 20px 0;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &_showMore {
+    display: block;
+  }
+
+  &_hide {
+    display: none;
+  }
+}
+
+//contacts
+.contacts {
+  background-color: $grey;
+
+  &_content {
+    padding: 80px 0;
+    text-align: center;
+
+    @include myMedia($md3) {
+      padding: 75px 0;
+    }
+
+    @include myMedia($md4) {
+      padding: 60px 0;
+    }
+  }
+
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    text-align: left;
+    font-family: $workSans;
+
+    @include myMedia($md4) {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+  }
+
+  &_info {
+    width: 35%;
+
+    @include myMedia($md4) {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    & li {
+      line-height: 200%;
+    }
+  }
+
+  &_form {
+    width: 60%;
+
+    @include myMedia($md4) {
+      width: 100%;
+    }
+
+    &-row {
+      margin-bottom: 30px;
+    }
+
+    &-firstLine {
+      display: flex;
+      justify-content: space-between;
+
+      @include myMedia($md4) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      & input {
+        width: 48%;
+        height: 52px;
+
+        @include myMedia($md4) {
+          width: 100%;
+        }
+      }
+      & input:first-child {
+        @include myMedia($md4) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    & textarea {
+      resize: none;
+      height: 160px;
+    }
+
+    &-control {
+      width: 100%;
+      padding: 16px 22px;
+      font-size: $fmed;
+      font-weight: 400;
+      line-height: 1.2;
+      background-color: #fff;
+      border: 0;
+
+      @include myMedia($md4) {
+        font-size: $fdef;
+      }
+
+      &::placeholder {
+        color: $darkgrey;
+        font-weight: inherit;
+        font-family: $workSans;
+        font-size: inherit;
+      }
+    }
+
+    & button {
+      background-color: $orange;
+      width: 181px;
+      height: 55px;
+      text-align: center;
+      text-transform: uppercase;
+      border: 0;
+      color: $white;
+      padding: 23px 35px;
+      cursor: pointer;
+
+      @include myMedia($md5) {
+        width: 100%;
+        height: 40px;
+        padding: 0;
+      }
+
+      &:hover {
+        background-color: #f7840a;
+      }
+    }
+  }
+}
+
+//footer
+footer {
+  background-color: $black;
+  color: $grey;
+  height: 60px;
+
+  & .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5px;
+
+    & .logo {
+      display: flex;
+      justify-content: flex-end;
+
+      & li {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+// PAGE 2: about me
+//banner
+.banner {
+  background-image: url(../img/about-me-top.jpg);
+  background-size: cover;
+
+  &_content {
+    text-align: center;
+    color: $white;
+    margin: 0 auto;
+    padding: 200px 0 100px 0;
+    width: 540px;
+
+    @include myMedia($md2) {
+      padding: 100px 0 50px 0;
+    }
+
+    @include myMedia($md5) {
+      width: 300px;
+    }
+  }
+
+  &_text {
+    margin-top: 38px;
+
+    @include myMedia($md5) {
+      text-align: justify;
+      padding: 0 5px;
+    }
+  }
+}
+
+//about myself
+.aboutMyself {
+  &_content {
+    display: flex;
+
+    @include myMedia($md3) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &_content-left {
+    background: url(../img/about-left-bg.jpg) no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 546px;
+
+    @include myMedia($md3) {
+      width: 100%;
+      height: 355px;
+    }
+
+    @include myMedia($md5) {
+      height: 200px;
+    }
+  }
+
+  &_content-right {
+    background: url(../img/about-right-bg.jpg) no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 546px;
+    padding: 10% 8% 0 60px;
+
+    @include myMedia($md3) {
+      width: 100%;
+      height: auto;
+      padding: 30px 8%;
+      text-align: center;
+    }
+
+    @include myMedia($md3) {
+      padding: 30px 1%;
+    }
+
+    & h2::before {
+      border-bottom: 0;
+
+      @include myMedia($md3) {
+        border-bottom: 2px solid $orange;
+      }
+    }
+  }
+
+  &_container {
+    width: 470px;
+    margin: 0 auto 0 0;
+
+    & h2::before {
+      border-bottom: 0;
+    }
+
+    @include myMedia($md2) {
+      width: 400px;
+    }
+
+    @include myMedia($md3) {
+      margin: 0 auto;
+    }
+
+    @include myMedia($md5) {
+      width: 300px;
+    }
+  }
+
+  &_text {
+    text-align: justify;
+
+    @include myMedia($md5) {
+      font-size: $fsmall;
+      padding: 0 5px;
+    }
+
+    & p {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+//features
+.features {
+  &_content {
+    position: relative;
+    padding: 68px 0 200px 0;
+
+    display: flex;
+    justify-content: center;
+
+    font-family: $montserrat;
+    font-size: $fsmall;
+
+    @include myMedia($md5) {
+      padding-top: 40px;
+    }
+  }
+
+  & input {
+    display: none;
+  }
+
+  & label {
+    margin: auto 10px;
+    height: 100px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 8px;
+    cursor: pointer;
+
+    @include myMedia($md5) {
+      margin: auto 0;
+      height: 200px;
+      text-align: center;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  & label + ul {
+    display: none;
+  }
+
+  & input:checked + label {
+    border-bottom: 1px solid $darkgrey;
+
+    @include myMedia($md5) {
+      color: $orange;
+      border-bottom: 0;
+    }
+  }
+
+  & input:checked + label + ul {
+    display: block;
+    position: absolute;
+    left: 25%;
+    top: 110px;
+
+    @include myMedia($md3) {
+      left: 15%;
+    }
+
+    @include myMedia($md5) {
+      top: 82px;
+    }
+  }
+
+  &_text {
+    line-height: 200%;
+
+    & li {
+      list-style-type: circle;
+    }
+  }
+}
+
+//conclusion
+.conclusion {
+  background-color: $grey;
+
+  &_content {
+    padding: 10% 22%;
+    text-align: center;
+
+    @include myMedia($md5) {
+      padding: 5% 10%;
+    }
+
+    h2 {
+      @include myMedia($md5) {
+        margin-bottom: 10px;
+      }
+    }
+
+    & h2::before {
+      border-bottom: 0;
+    }
+  }
+
+  &_text {
+    margin-bottom: 40px;
+
+    @include myMedia($md5) {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+  }
+
+  & button {
+    background-color: $orange;
+    width: 220px;
+    height: 55px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0;
+    color: $white;
+    padding: 23px 35px;
+    cursor: pointer;
+
+    @include myMedia($md5) {
+      width: 100%;
+      height: 40px;
+      padding: 0;
+    }
+
+    &:hover {
+      background-color: #f7840a;
+    }
+  }
+}
+
+// PAGE 3: prices
+.prices {
+  background-color: $grey;
+
+  &_content {
+    padding: 98px 0 20px 0;
+    text-align: center;
+  }
+
+  & h1 {
+    margin-bottom: 20px;
+  }
+
+  &_options {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    @include myMedia($md5) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &_item {
+    width: 48%;
+    background-color: $white;
+
+    &:hover .prices_figure img {
+      opacity: 0.8;
+    }
+
+    &:hover .prices_caption {
+      padding: 10px 30px;
+    }
+
+    @include myMedia($md5) {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  &_figure {
+    position: relative;
+
+    img {
+      width: 100%;
+      opacity: 0.6;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  &_caption {
+    position: absolute;
+    left: 3%;
+    bottom: 5%;
+
+    padding: 5px 15px;
+    transition: 0.3s ease-in-out;
+    background-color: $black;
+
+    color: $white;
+    font-size: $fsmall;
+    font-family: $workSans;
+    text-transform: uppercase;
+  }
+
+  &_moreDetails {
+    height: 60px;
+    text-transform: uppercase;
+    font-size: $fsmall;
+    font-family: $montserrat;
+    padding: 20px 0;
+    display: none;
+    transition: 0.5s ease-in-out;
+  }
+
+  &_cost {
+    &-options {
+      height: 60px;
+      padding: 20px 0;
+      transition: 0.3s ease-in-out;
+
+      &:nth-child(2) {
+        border-top: solid 1px $grey;
+        border-bottom: solid 1px $grey;
+      }
+
+      & span {
+        font-weight: 600;
+        font-size: $fmed;
+      }
+
+      &:hover {
+        height: 100px;
+      }
+
+      &:hover .prices_moreDetails {
+        display: block;
+      }
+    }
+  }
+}
+
+// PAGE 4: blog
+.myBlog {
+  background-color: $grey;
+  & h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.blog {
+  &_filter {
+    margin: 0 auto;
+
+    &-icon {
+      font-size: $fmed;
+      padding: 20px;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    &-options {
+      display: none;
+
+      & ul {
+        display: flex;
+        justify-content: center;
+        font-size: $fsmall;
+        text-transform: uppercase;
+        font-family: $montserrat;
+        margin-bottom: 40px;
+
+        & li {
+          margin: 0 15px;
+          opacity: 0.6;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.selected {
+  opacity: 1;
+  color: $orange;
+}
+
+// PAGE 5 contacts
+.myContacts {
+  & h1 {
+    margin-bottom: 20px;
+  }
+}
+
+// PAGE 4.1 Blog Structure of atom
+.blogItem {
+  background-color: $grey;
+  background-size: cover;
+  margin-top: 60px;
+  font-family: $workSans;
+
+  & h1 {
+    padding-top: 5%;
+    @include myMedia($md4) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &_content {
+    padding-bottom: 5%;
+    display: flex;
+
+    @include myMedia($md4) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &_left {
+    @include myMedia($md4) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &_description {
+    margin: 3% 0 6% 0;
+    width: 90%;
+
+    @include myMedia($md4) {
+      margin: 3% auto 6% auto;
+    }
+
+    & span {
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    & ul {
+      width: 75%;
+
+      @include myMedia($md4) {
+        width: 100%;
+      }
+
+      & li {
+        list-style-type: circle;
+        margin: 8px 0 8px 30px;
+
+        @include myMedia($md4) {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &_info {
+    & li {
+      line-height: 200%;
+    }
+  }
+
+  &_right {
+    width: 50%;
+
+    & img {
+      width: 280px;
+
+      @include myMedia($md4) {
+        width: 240px;
+        margin: 15px auto;
+      }
+    }
+
+    @include myMedia($md4) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.itemTransition {
+  background-color: $white;
+  font-size: $fsmall;
+  text-transform: uppercase;
+  font-family: $montserrat;
+  padding: 20px 0;
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & span {
+      @include myMedia($md5) {
+        display: none;
+      }
+    }
+
+    & li {
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+//animation
+@keyframes wobble {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

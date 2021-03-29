@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans&Work+Sans&display=swap" 
+          rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/76ca3c8d37.js" crossorigin="anonymous"></script>
+    <title>Contacts</title>
+</head>
+<body>
+<!--Header-->
+<header>
+    <div class="header header_fix-body">
+        <div class="container">
+            <div class="header_content">
+                <div class="header_logo">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <div class="header_burger">
+                    <span></span>
+                </div>
+                <nav class="header_menu">
+                    <ul class="header_list">
+                        <li><a href="index.html" class="header_link">ГЛАВНАЯ</a></li>
+                        <li><a href="about.html" class="header_link">ОБО МНЕ</a></li>
+                        <li><a href="prices.html" class="header_link">ЦЕНЫ</a></li>
+                        <li><a href="blog.html" class="header_link">БЛОГ</a></li>
+                        <li><a href="contacts.html" class="header_link">КОНТАКТЫ</a></li>
+                    </ul> 
+                </nav> 
+            </div>  
+        </div>
+    </div>
+</header>
+
+<!--Main content of the page-->
+<main>
+ <!--Contacts-->
+ <section class="contacts">
+    <div class="container">
+        <div class="contacts_content myContacts">
+            <h1>Контактная информация</h1>
+            <div class="contacts_text">
+                Вы можете связаться со мной любым удобным для себя способом
+                 и задать интересующие вопросы
+            </div>
+            <div class="contacts_wrapper">
+                <ul class="contacts_info">
+                    <li><strong>Телефон: </strong>+44 123 456 789</li>
+                    <li><strong>E-mail: </strong>mv.trofimova@gmail.com</li>
+                    <li><strong>Skype: </strong>maria_chem</li>
+                </ul>
+                <div class="contacts_form">
+                    <form action="http://fe.it-academy.by/TestForm.php" method="GET" target="_blank">
+                        <div class="contacts_form-row contacts_form-firstLine">
+                            <input type="text" name="name" placeholder="Ваше имя" required class="contacts_form-control ">
+                            <input type="text" name="email" placeholder="Ваш e-mail" required class="contacts_form-control">
+                        </div>
+                        <div class="contacts_form-row">
+                            <input type="text" name="subject" placeholder="Тема сообщения" required class="contacts_form-control">
+                        </div>
+                        <div class="contacts_form-row">
+                            <textarea name="message" placeholder="Ваше сообщение" required class="contacts_form-control"></textarea>
+                        </div>
+                        <button>Отправить</button>
+                    </form>
+                </div>
+                </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!--Footer-->
+<footer>
+    <div class="container content">
+        <div class="copy">© Copyright 2021</div>
+        <ul class="logo">
+            <li><i class="fab fa-facebook"></i></li>
+            <li><i class="fab fa-instagram-square"></i></li>
+            <li><i class="fab fa-google-plus-g"></i></li>
+            <li><i class="fab fa-linkedin"></i></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

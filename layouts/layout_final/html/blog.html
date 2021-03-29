@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans&Work+Sans&display=swap" 
+                rel="stylesheet">
+          <link rel="stylesheet" href="../css/style.css">
+          <script src="https://kit.fontawesome.com/76ca3c8d37.js" crossorigin="anonymous"></script>
+    <title>Blog</title>
+</head>
+<body>
+<!--Header-->
+<header>
+    <div class="header header_fix-body">
+        <div class="container">
+            <div class="header_content">
+                <div class="header_logo">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <div class="header_burger">
+                    <span></span>
+                </div>
+                <nav class="header_menu">
+                    <ul class="header_list">
+                        <li><a href="index.html" class="header_link">ГЛАВНАЯ</a></li>
+                        <li><a href="about.html" class="header_link">ОБО МНЕ</a></li>
+                        <li><a href="prices.html" class="header_link">ЦЕНЫ</a></li>
+                        <li><a href="blog.html" class="header_link">БЛОГ</a></li>
+                        <li><a href="contacts.html" class="header_link">КОНТАКТЫ</a></li>
+                    </ul> 
+                </nav> 
+            </div>  
+        </div>
+    </div>
+</header>
+
+<!--Main content of the page-->
+<main>
+     <!--Blog-->
+     <section class="blog myBlog">
+        <div class="container">
+            <div class="blog_content">
+                <h1>Мой блог</h1>
+                <div class="blog_filter">
+                    <div class="blog_filter-icon"><a href="#"><i class="fas fa-th-large" id="choice"></i></a></div>
+                    <div class="blog_filter-options">
+                        <ul id="filter">
+                            <li><a href="#" id="all" data-option="all">Все</a></li>
+                            <li><a href="#" id="useful" data-option="useful">Полезные статьи</a></li>
+                            <li><a href="#" id="interesting" data-option="interesting">Интересные факты</a></li>
+                            <li><a href="#" id="general" data-option="general">Общие темы</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <ul class="blog_gallery">
+                    <li data-filter="useful" class="blog_item">
+                        <span>Строение атома</span>
+                        <a href="structure-of-atom.html" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li data-filter="useful" class="blog_item">
+                        <span>Типы кристаллических решеток</span>
+                        <a href="crystal-gratings.html" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li data-filter="interesting" class="blog_item">
+                        <span>Что будет, если пить <strong>МНОГО ВОДЫ</strong></span>
+                        <a href="enough-water.html" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li data-filter="interesting" class="blog_item"><span>Цветные осадки</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li> 
+                    <li data-filter="useful" class="blog_item"><span>Классификация оксидов</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li data-filter="general" class="blog_item">
+                        <span>Преимущества онлайн занятий</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li data-filter="useful" class="blog_item"><span>Химическое равновесие</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li data-filter="general" class="blog_item">
+                        <span>ЦТ: <br> за или против</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li data-filter="interesting" class="blog_item">
+                        <span>Можно ли есть бумагу</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li data-filter="useful" class="blog_item">
+                        <span>Таблица Менделеева</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li data-filter="general" class="blog_item">
+                        <span>Какой ВУЗ выбрать</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li data-filter="interesting" class="blog_item">
+                        <span>Танцы осьминога</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                </ul> 
+            </div>   
+        </div>
+    </section>
+</main>
+
+<!--Footer-->
+<footer>
+    <div class="container content">
+        <div class="copy">© Copyright 2021</div>
+        <ul class="logo">
+            <li><i class="fab fa-facebook"></i></li>
+            <li><i class="fab fa-instagram-square"></i></li>
+            <li><i class="fab fa-google-plus-g"></i></li>
+            <li><i class="fab fa-linkedin"></i></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
