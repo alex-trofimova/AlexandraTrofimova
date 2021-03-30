@@ -1,6 +1,7 @@
 @import "variable";
 @import "mixins";
 
+//general styles
 * {
   margin: 0;
   padding: 0;
@@ -82,6 +83,7 @@ h2 {
   }
 }
 
+// container
 .container {
   width: $md1;
   margin: 0 auto;
@@ -280,6 +282,10 @@ h2 {
 .greeting {
   background-color: $grey;
   margin-top: 60px;
+
+  @include myMedia($md4) {
+    margin-top: 40px;
+  }
 
   & .container {
     display: flex;
@@ -569,6 +575,10 @@ h2 {
       margin-bottom: 50px;
     }
 
+    @include myMedia($md4) {
+      pointer-events: none;
+    }
+
     &:hover {
       margin-top: -45px;
     }
@@ -734,14 +744,17 @@ h2 {
   &_gallery {
     display: flex;
     flex-flow: wrap;
-    justify-content: center;
+    // justify-content: center;
+
+    @include myMedia($md5) {
+      justify-content: center;
+    }
   }
 
   &_item {
     width: 255px;
     height: 255px;
     margin: 1%;
-    background-color: green;
     display: inline-block;
     position: relative;
     background-size: cover;
@@ -1415,6 +1428,10 @@ footer {
       &:hover .prices_moreDetails {
         display: block;
       }
+
+      @include myMedia($md4) {
+        pointer-events: none;
+      }
     }
   }
 }
@@ -1451,9 +1468,18 @@ footer {
         font-family: $montserrat;
         margin-bottom: 40px;
 
+        @include myMedia($md5) {
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+
         & li {
           margin: 0 15px;
           opacity: 0.6;
+
+          @include myMedia($md5) {
+            margin-bottom: 10px;
+          }
 
           &:hover {
             opacity: 1;
@@ -1476,7 +1502,7 @@ footer {
   }
 }
 
-// PAGE 4.1 Blog Structure of atom
+// PAGE 6-... Blog item
 .blogItem {
   background-color: $grey;
   background-size: cover;
