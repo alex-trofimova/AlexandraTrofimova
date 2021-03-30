@@ -416,6 +416,10 @@ h2 {
       font-size: $fsmall;
     }
   }
+
+  &_signature {
+    text-align: center;
+  }
 }
 
 //lessons
@@ -744,9 +748,8 @@ h2 {
   &_gallery {
     display: flex;
     flex-flow: wrap;
-    // justify-content: center;
 
-    @include myMedia($md5) {
+    @include myMedia($md2) {
       justify-content: center;
     }
   }

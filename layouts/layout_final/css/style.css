@@ -491,6 +491,10 @@ h2::before {
   font-size: 12px;
 }
 
+.numbers_signature {
+  text-align: center;
+}
+
 .lessons_content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -885,7 +889,7 @@ h2::before {
       flex-flow: wrap;
 }
 
-@media all and (max-width: 560px) {
+@media all and (max-width: 1200px) {
   .blog_gallery {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

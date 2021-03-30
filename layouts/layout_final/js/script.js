@@ -56,20 +56,6 @@ $(document).ready(function (){
         $("body").toggleClass("lock"); //чтобы при открытом меню не скроллился экран 
     });
 
-    // //плавный переход между страницами
-    // $("body").css("display", "none"); 
-    // $("body").fadeIn(900); 
-   
-    // $("a.menu_link").click(function(e){ 
-    //     e.preventDefault();
-    //     linkLocation = this.href;
-    //     $("body").fadeOut(900, redirectPage); 
-    // });
-
-    // function redirectPage() {
-    // window.location = linkLocation;
-    // }
-
     //слайдер
     $(".reviews_slider").slick();
 
