@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans&Work+Sans&display=swap" 
+          rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/76ca3c8d37.js" crossorigin="anonymous"></script>
+    <title>Home page</title>
+</head>
+<body>
+<!--Header-->
+<header>
+    <div class="header">
+        <div class="container">
+            <div class="header_content">
+                <div class="header_logo">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <div class="header_burger">
+                    <span></span>
+                </div>
+                <nav class="header_menu">
+                    <ul class="header_list">
+                        <li><a href="index.html" class="header_link">ГЛАВНАЯ</a></li>
+                        <li><a href="about.html" class="header_link">ОБО МНЕ</a></li>
+                        <li><a href="prices.html" class="header_link">ЦЕНЫ</a></li>
+                        <li><a href="blog.html" class="header_link">БЛОГ</a></li>
+                        <li><a href="contacts.html" class="header_link">КОНТАКТЫ</a></li>
+                    </ul> 
+                </nav> 
+            </div>  
+        </div>
+    </div>
+</header>
+
+<!--Main content of the page-->
+<main>
+    <!--Greeting-->
+    <section class="greeting">
+        <div class="container">
+            <div class="greeting_content">
+                <div class="greeting_text-up">
+                    Химия проще, чем тебе кажется
+                </div>
+                <h1>Репетитор по химии</h1>
+                <div class="greeting_text-down">
+                    Всем привет.
+                    Меня зовут Мария. <br>И я &mdash; Ваш персональный репетитор по химии.
+                </div>
+            </div>
+            <div class="greeting_photo">
+                <img src="../img/avatar.jpg" alt="avatar">
+            </div>
+        </div>
+    </section>
+
+    <!--About me-->
+    <section class="aboutMe">
+        <div class="container">
+            <div class="aboutMe_content">
+                <h2>Обо мне</h2>
+                <div class="aboutMe_text">
+                    Моя цель &mdash; научить понимать, заинтересовать, а не зазубривать. 
+                    Стараюсь объяснять материал ассоциативно, на простых примерах.
+                    Результат &mdash; это всегда труд, многократные действия, повторения. 
+                </div>
+                <div class="aboutMe_signature">
+                    <img src="../img/signature.jpg" alt="signature" width="120px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Numbers-->
+    <section class="numbers">
+        <div class="container">
+            <ul class="numbers_list">
+                <li class="numbers_content">
+                    <div class="numbers_icons"><i class="fas fa-user"></i></div>
+                    <div class="numbers_text">
+                        <span>68</span><br><p>подготовленных учеников </p>
+                    </div>
+                </li>
+                 <li class="numbers_content">
+                    <div class="numbers_icons"><i class="fas fa-book-open"></i></div>
+                    <div class="numbers_text">
+                        <span>1120</span><br><p>разобранных задач</p>
+                    </div>
+                </li>
+                <li class="numbers_content">
+                    <div class="numbers_icons"><i class="fas fa-chart-bar"></i></div>
+                    <div class="numbers_text">
+                        <span>87</span><br><p>средний балл на ЦТ</p>
+                    </div>
+                </li>
+                <li class="numbers_content">
+                    <div class="numbers_icons"><i class="fas fa-star"></i></div>
+                    <div class="numbers_text">
+                        <span>25</span><br><p>положительных отзывов</p>
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+    </section>
+
+    <!--Lessons-->
+    <section class="lessons">
+        <div class="lessons_content">
+            <div class="lessons_content-left">
+                <div class="lessons_container">
+                    <h2>Мои занятия</h2>
+                    <div class="lessons_block">
+                        <div class="lessons_text">
+                            Курсы для школьников 7&dash;11 классы
+                            <span id="number75"></span>%
+                        </div>
+                        <div class="lessons_line">
+                            <div id="line75" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="lessons_block">
+                        <div class="lessons_text">
+                            Индивидуальные занятия
+                            <span id="number90"></span>%
+                        </div>
+                        <div class="lessons_line" >
+                            <div id="line90" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="lessons_block">
+                        <div class="lessons_text">
+                            Дистанционная форма обучения
+                            <span id="number60"></span>%
+                        </div>
+                        <div class="lessons_line" >
+                            <div id="line60" style="width: 0;"></div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="lessons_content-right"></div>
+                
+        </div>   
+    </section>
+
+    <!--Price-->
+    <section class="price">
+        <div class="container">
+            <div class="price_content">
+                <h2>Программы обучения</h2>
+                <div class="price_text">
+                    Выберите подходящий для Вас вариант обучения
+                </div>
+                <ul class="price_programs">
+                    <li class="price_option">
+                        <div class="price_option-name">
+                            Разовое занятие
+                        </div>
+                        <div class="price_option-cost">
+                            <br>
+                            <span>25 </span>рублей / 45 минут
+                        </div>
+                        <div class="price_option-hidden">
+                            <span>подходит для нерегулярных <br>встреч по необходимости</span>
+                        </div>
+                        <ul class="price_option-details">
+                            <li><span>подготовка к контрольной или лабораторной работе</span></li>
+                            <li><span>разбор домашнего задания</span></li>
+                            <li><span>освоение определенной темы</span></li>
+                            <li><span>заполнение пробелов в конкретной теме</span></li>
+                            <li><span>разбор конкретных вопросов, решение типовых задач</span></li>
+                        </ul>
+                    </li>
+                    <li class="price_option">
+                        <div class="price_option-name">
+                            Курс &laquo;Школьник&raquo;
+                        </div>
+                        <div class="price_option-cost">
+                            <span>25 </span>рублей / 1 занятие<br>
+                            <span>90 </span>рублей / 4 занятия<br>
+                            <span>160 </span>рублей / 8 занятий 
+                        </div>
+                        <div class="price_option-hidden">
+                            <span>больше занятий в абонементе &mdash; меньше цена</span>
+                        </div>
+                        <ul class="price_option-details">
+                            <li><span>индивидуальные или групповые занятия 
+                                длительностью <strong>45</strong> минут каждое</span></li>
+                            <li><span>предоставление информации в мини конспектах, 
+                                таблицах и презентациях</span></li>
+                            <li><span>освоение школьного материала</span></li>
+                            <li><span>выполнение домашнего задания</span></li>
+                            <li><span>подготовка к лабораторным, самостоятельным, контрольным работам</span></li>
+                        </ul>
+                    </li>
+                    <li class="price_option">
+                        <div class="price_option-name">
+                            Курс &laquo;Абитуриент&raquo;
+                        </div>
+                        <div class="price_option-cost">
+                            <span>45 </span>рублей / 1 занятие<br>
+                            <span>170 </span>рублей / 4 занятия<br>
+                            <span>320 </span>рублей / 8 занятий 
+                        </div>
+                        <div class="price_option-hidden">
+                            <span>больше занятий в абонементе &mdash; меньше цена</span>
+                        </div>
+                        <ul class="price_option-details">
+                            <li><span>индивидуальные или групповые занятия 
+                                длительностью <strong>90</strong> минут каждое</span></li>
+                            <li><span>мини конспекты по теории</span></li>
+                            <li><span>освоение разделов "Неорганическая химия" и "Органическая химия"</span></li>
+                            <li><span>обязательные домашние 
+                                задания на усвоение пройденного материала</span></li>
+                            <li><span>практические занятия по решению тестовых задач и написанию реакций</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <!--Reviews-->
+    <section class="reviews">
+        <div class="container">
+            <div class="reviews_slider">
+                <div class="reviews_slider-item">
+                    <p>&laquo;Репетитор высшей категории, сразу нашла пробелы в знаниях, направила ребенка и все знания встали на свои места. 
+                    Мария Владимировна сразу нашла контакт с дочкой, доброжелательная. За одно занятие смогла выстроить цепочку 
+                    решения непонятных задач и применения формул, что придало уверенности в знаниях дочери.&raquo;</p>
+                    <span>Наталья</span>
+                </div>
+                <div class="reviews_slider-item">
+                    <p>&laquo;Мы занимались в прошлом году и сейчас продолжаем. Девочка отставала у нас в школе, не понимала немножко темы. 
+                        В конце восьмого класса получили "восемь", на два балла улучшили результат. Хорошая девушка, мы довольны. 
+                        Она только по домашней работе объясняла ребёнку, по темам. Всё хорошо. Общий диалог у них состоялся, девочка довольна, до этого у нас была другая – не сложилось, а этот преподаватель подошёл хорошо. Молодец!&raquo;</p>
+                    <span>Оксана</span> 
+                </div>
+                <div class="reviews_slider-item">
+                    <p>&laquo;Общая оценка репетитора &mdash; 5. Работой специалиста очень довольны! 
+                        Сказать могу только самые лучшие слова. Отзывчивая, добросовестная, пунктуальная. Обязательно продолжим общение в будущем учебном году.&raquo;</p>
+                    <span>Юлия</span> 
+                </div>
+                <div class="reviews_slider-item">
+                    <p>&laquo;Очень хороший учитель, который не только прекрасно даёт материал, 
+                        но и умеет найти общий язык с учеником. Спасибо, Мария!&raquo;</p>
+                    <span>Ирина</span> 
+                </div>
+                <div class="reviews_slider-item">
+                    <p>&laquo;Замечательный педагог. Спокойный, компетентный и доброжелательный. С удовольствием ждем занятий. Мы довольны.&raquo;</p>
+                    <span>Виталий</span> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Blog-->
+    <section class="blog">
+        <div class="container">
+            <div class="blog_content">
+                <h2>Мой блог</h2>
+                <ul class="blog_gallery">
+                    <li class="blog_item">
+                        <span>Строение атома</span>
+                        <a href="structure-of-atom.html" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li class="blog_item">
+                        <span>Типы кристаллических решеток</span>
+                        <a href="crystal-gratings.html" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li class="blog_item">
+                        <span>Что будет, если пить <strong>МНОГО ВОДЫ</strong></span>
+                        <a href="enough-water.html" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li class="blog_item"><span>Цветные осадки</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li> 
+                    <li class="blog_item"><span>Классификация оксидов</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li class="blog_item">
+                        <span>Преимущества онлайн занятий</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li class="blog_item"><span>Химическое равновесие</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li class="blog_item">
+                        <span>ЦТ: <br> за или против</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li class="blog_item blog_item-hidden">
+                        <span>Можно ли есть бумагу</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li class="blog_item blog_item-hidden">
+                        <span>Таблица Менделеева</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li class="blog_item blog_item-hidden">
+                        <span>Какой ВУЗ выбрать</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                    <li class="blog_item blog_item-hidden">
+                        <span>Танцы осьминога</span>
+                        <a href="#" target="_blank" class="blog_moreDetails">
+                            <img src="../img/eye.png" alt="eye-icon">
+                        </a>
+                    </li>
+                </ul>
+                <div class="blog_btn blog_showMore" id="showMore">
+                    <a href="#">Показать ещё</a> 
+                </div> 
+                <div class="blog_btn blog_hide" id="hide">
+                    <a href="#">Скрыть</a> 
+                </div> 
+            </div>   
+        </div>
+    </section>
+
+    <!--Contacts-->
+    <section class="contacts">
+        <div class="container">
+            <div class="contacts_content">
+                <h2>Контактная информация</h2>
+                <div class="contacts_text">
+                    Вы можете связаться со мной любым удобным для себя способом
+                     и задать интересующие вопросы
+                </div>
+                <div class="contacts_wrapper">
+                    <ul class="contacts_info">
+                        <li><strong>Телефон: </strong>+44 123 456 789</li>
+                        <li><strong>E-mail: </strong>mv.trofimova@gmail.com</li>
+                        <li><strong>Skype: </strong>maria_chem</li>
+                    </ul>
+                    <div class="contacts_form">
+                        <form action="../php/sendmail.php" method="POST" target="_blank">
+                            <div class="contacts_form-row contacts_form-firstLine">
+                                <input type="text" name="name" placeholder="Ваше имя" required class="contacts_form-control ">
+                                <input type="text" name="email" placeholder="Ваш e-mail" required class="contacts_form-control">
+                            </div>
+                            <div class="contacts_form-row">
+                                <input type="text" name="subject" placeholder="Тема сообщения" required class="contacts_form-control">
+                            </div>
+                            <div class="contacts_form-row">
+                                <textarea name="message" placeholder="Ваше сообщение" required class="contacts_form-control"></textarea>
+                            </div>
+                            <button>Отправить</button>
+                        </form>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--Footer-->
+<footer>
+    <div class="container content">
+        <div class="copy">&copy; Copyright 2021</div>
+        <ul class="logo">
+            <li><i class="fab fa-facebook"></i></li>
+            <li><i class="fab fa-instagram-square"></i></li>
+            <li><i class="fab fa-google-plus-g"></i></li>
+            <li><i class="fab fa-linkedin"></i></li>
+        </ul>
+    </div>
+</footer>
+<!--Подключение jquery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+<!--Подключение слайдера slick-->
+<script src="../js/slick.min.js"></script>
+<!--Подключение файла скриптов-->
+<script src="../js/script.js"></script>
+</body>
+</html>
